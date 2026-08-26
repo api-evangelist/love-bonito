@@ -1,0 +1,22 @@
+generated: '2026-08-25'
+method: searched
+source: >-
+  https://www.lovebonito.com/ site sweep, sg_sitemap.xml (2,472 URLs), robots.txt, WebSearch for
+  a Love, Bonito developer/API pricing page — 2026-08-25.
+plan_count: 0
+plans: []
+note: >-
+  Love, Bonito publishes no API plans, tiers, or developer pricing of any kind, because it
+  publishes no API. It is a direct-to-consumer womenswear retailer: everything priced on its site
+  is apparel. No developer portal, no "API pricing" page, and no rate-tier table exists on any
+  Love, Bonito host. The only commercial partner surface found is an affiliate program operated
+  through third-party networks (Impact, FlexOffers, Optimise) with commission rates published by
+  those networks rather than by Love, Bonito, and it is a referral-link program with no API
+  attached. plan_count 0 here is a measured absence, not an unchecked field.
+evidence:
+- url: https://www.lovebonito.com/media/sitemaps/sg_sitemap.xml
+  status: 200
+  finding: 2,472 URLs, all storefront catalog/content; no developer, API, or API-pricing page.
+- url: https://www.lovebonito.com/sg/partnerships
+  status: 404
+  finding: Partnerships URL listed in the sitemap is itself a dead page.

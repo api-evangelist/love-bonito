@@ -1,0 +1,73 @@
+generated: '2026-08-25'
+method: probed
+source: >-
+  Anonymous GET probes of /.well-known/* on every Love, Bonito host that resolves
+  (www.lovebonito.com, lovebonito.com, api.lovebonito.com), 2026-08-25.
+summary: >-
+  No .well-known document is served on any Love, Bonito host. The storefront
+  (www.lovebonito.com) is a Next.js application whose catch-all route answers 404 with an HTML
+  error shell for every /.well-known path — no security.txt, no api-catalog, no OpenID/OAuth
+  metadata, no ai-plugin.json, and no A2A agent card. The first-party Kong gateway
+  (api.lovebonito.com) answers 401 {"message":"Unauthorized"} on every path including
+  /.well-known/*, so nothing there is anonymously readable either. Requests for
+  /.well-known/security.txt specifically are intercepted by a Cloudflare WAF rule and answered
+  with a 403 challenge page on all hosts. NO WellKnown OR SecurityTxt POINTER IS EMITTED —
+  this file records a measured absence, not a served surface.
+hosts:
+- host: www.lovebonito.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+    note: Cloudflare WAF challenge page (HTML), not a document.
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    note: Next.js HTML error shell.
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    note: Next.js HTML error shell (pre-0.3 A2A path).
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: lovebonito.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+    note: Cloudflare WAF challenge page (HTML), not a document.
+- host: api.lovebonito.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+    note: Cloudflare WAF challenge page (HTML), not a document.
+  - path: /.well-known/agent-card.json
+    status: 401
+    file: null
+    note: '{"message":"Unauthorized"} from the Kong gateway.'
+  - path: /.well-known/agent.json
+    status: 401
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 401
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 401
+    file: null
+  - path: /.well-known/api-catalog
+    status: 401
+    file: null

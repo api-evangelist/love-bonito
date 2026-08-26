@@ -1,17 +1,32 @@
 aid: love-bonito
 name: Love Bonito
-description: 'Love Bonito is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Love, Bonito is a Singapore-headquartered direct-to-consumer womenswear brand, founded in 2010 out
+  of the BonitoChico blogshop and now one of Southeast Asia's largest vertically integrated fashion
+  labels. It designs, manufactures and retails women's apparel — Signatures, Staples and Capsule
+  collections spanning tops, dresses, bottoms, matching sets, petites and maternity — through its own
+  e-commerce storefront, iOS/Android shopping apps and physical stores across Singapore, Malaysia,
+  Indonesia, Hong Kong, Cambodia and the Philippines. The commerce stack is a Next.js storefront on a
+  Magento-derived backend with Storyblok for content, fronted by Cloudflare, with an internal Kong API
+  gateway at api.lovebonito.com serving its own first-party apps. Love, Bonito publishes no public
+  developer program, API reference, or machine-readable contract; its partner surface is an affiliate
+  program run through third-party networks (Impact, FlexOffers), not a first-party API.
+image: https://www.lovebonito.com/resources/favicons/192.png?v=3
 url: https://raw.githubusercontent.com/api-evangelist/love-bonito/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-25'
 modified: '2026-08-25'
 tags:
 - Company
+- Retail
+- E-Commerce
+- Fashion
+- Apparel
+- Direct to Consumer
+- Singapore
+- Southeast Asia
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/love-bonito-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.lovebonito.com/
+- type: HelpCenter
+  url: https://www.lovebonito.com/intl/faq
+- type: Support
+  url: https://www.lovebonito.com/intl/contact-us
+- type: TermsOfService
+  url: https://www.lovebonito.com/intl/pages/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.lovebonito.com/intl/pages/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/love-bonito
+- type: Plans
+  url: plans/love-bonito-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/love-bonito-rate-limits.yml
+- type: LLMsTxt
+  url: llms/love-bonito-llms.txt
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Love, Bonito is a direct-to-consumer womenswear retailer whose product is clothing, not
+    software; the only API host it runs, the Kong gateway at api.lovebonito.com, is undocumented
+    private plumbing for its own storefront and mobile apps and returns 401 Unauthorized on every
+    path including /.well-known/*, while no developers./docs. host resolves and its 2,472-URL
+    sitemap contains no developer page.
+  evidence:
+  - url: https://api.lovebonito.com/
+    status: 401
+  - url: https://api.lovebonito.com/rest/all/schema
+    status: 401
+  - url: https://api.lovebonito.com/graphql
+    status: 401
+  - url: https://developers.lovebonito.com/
+    status: 0
+  - url: https://www.lovebonito.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.lovebonito.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.lovebonito.com/media/sitemaps/sg_sitemap.xml
+    status: 200
+  checked: '2026-08-25'

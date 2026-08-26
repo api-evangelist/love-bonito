@@ -1,0 +1,39 @@
+generated: '2026-08-25'
+method: probed
+source: live DNS/TLS/HTTP probes of lovebonito.com hosts (probe-domain-security.py + manual curl, 2026-08-25)
+hosts:
+- host: www.lovebonito.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 12 19:56:19 2026 GMT
+  hsts: max-age=31536000; includeSubDomains
+  hsts_max_age: 31536000
+  note: >-
+    Storefront is a Next.js app served through Cloudflare. HSTS is present on every response,
+    including the WAF block pages. Cloudflare began answering 403 to repeated automated GETs
+    partway through the pass, so some probe rows below record a challenge rather than an origin
+    response.
+- host: api.lovebonito.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 12 19:56:19 2026 GMT
+  cert_issuer: Google Trust Services WE1
+  hsts: max-age=31536000; includeSubDomains
+  hsts_max_age: 31536000
+  note: >-
+    First-party Kong API gateway (x-kong-response-latency header) fronted by Cloudflare. Every
+    path probed returned HTTP 401 {"message":"Unauthorized"}. Not a published/documented API —
+    it serves Love, Bonito's own storefront and mobile apps.
+- host: admin.lovebonito.com
+  https: true
+  hsts: max-age=31536000; includeSubDomains
+  note: Administrative host; returns a Cloudflare 403 to anonymous requests.
+domains:
+- domain: lovebonito.com
+  dnssec: true
+  caa: []
+  caa_note: No CAA record published — any public CA may issue for this domain.
+  spf: true
+  spf_record: v=spf1 include:_spf.google.com include:spf.mandrillapp.com include:servers.mcsv.net include:mail.zendesk.com ~all
+  dmarc: true
+  dmarc_policy: quarantine

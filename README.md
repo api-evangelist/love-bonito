@@ -64,5 +64,32 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Love Bonito is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Love, Bonito is a Singapore-headquartered direct-to-consumer womenswear brand, founded in 2010 out of
+the BonitoChico blogshop and now one of Southeast Asia's largest vertically integrated fashion labels.
+It designs, manufactures and retails women's apparel through its own e-commerce storefront, iOS/Android
+shopping apps, and physical stores across Singapore, Malaysia, Indonesia, Hong Kong, Cambodia and the
+Philippines.
+
+## No public API
+
+Love, Bonito publishes no developer program, API reference, SDK, webhook catalog, MCP server, or
+machine-readable contract of any kind. This profile records that absence and the probes behind it:
+
+- `https://api.lovebonito.com/` is a first-party Kong gateway serving Love, Bonito's own storefront and
+  mobile apps. Every path probed returns `HTTP 401 {"message":"Unauthorized"}`.
+- No `developers.` or `docs.` host resolves on `lovebonito.com`.
+- No `/.well-known/*` document is served on any Love, Bonito host — see `well-known/`.
+- The only partner surface is an affiliate program run through third-party networks (Impact,
+  FlexOffers, Optimise); it is a referral-link program with no API.
+
+## Links
+
+- Website — https://www.lovebonito.com/
+- Our Story — https://www.lovebonito.com/intl/global/about-us
+- FAQ — https://www.lovebonito.com/intl/faq
+- Contact Us — https://www.lovebonito.com/intl/contact-us
+- Terms & Conditions — https://www.lovebonito.com/intl/pages/terms-and-conditions
+- Privacy Policy — https://www.lovebonito.com/intl/pages/privacy-policy
+- Careers — https://apply.workable.com/lovebonito/
+- GitHub — https://github.com/love-bonito (engineering hiring challenges and forked Magento 2
+  extensions; no product code, no API client libraries)

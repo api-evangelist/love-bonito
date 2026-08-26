@@ -1,0 +1,53 @@
+# Love, Bonito
+
+> Love, Bonito is a Singapore-headquartered direct-to-consumer womenswear brand, founded in 2010
+> out of the BonitoChico blogshop and now one of Southeast Asia's largest vertically integrated
+> fashion labels. It designs, manufactures and retails women's apparel through its own e-commerce
+> storefront, iOS/Android shopping apps, and physical stores across Singapore, Malaysia, Indonesia,
+> Hong Kong, Cambodia and the Philippines.
+
+## No public API
+
+Love, Bonito does **not** publish a developer program, an API reference, an SDK, a webhook
+catalog, an MCP server, or any machine-readable contract (OpenAPI, AsyncAPI, GraphQL SDL, WSDL,
+Protobuf). There is nothing here for an agent to call.
+
+- No `developers.` or `docs.` host resolves on lovebonito.com.
+- `https://api.lovebonito.com/` is a first-party Kong API gateway serving Love, Bonito's own
+  storefront and mobile apps. Every path probed returns `HTTP 401 {"message":"Unauthorized"}`.
+  It is not documented, not marketed, and not offered to third parties.
+- No `/.well-known/*` document is served on any Love, Bonito host.
+- The only partner surface is an affiliate program operated through third-party networks
+  (Impact, FlexOffers, Optimise). It is a referral-link program with no API.
+
+If you need Love, Bonito product or order data programmatically, contact the company directly —
+do not assume an endpoint exists.
+
+## Company
+
+- [Home](https://www.lovebonito.com/): Storefront, regionalised per market (`/sg`, `/my`, `/id`, `/hk`, `/ph`, `/intl`).
+- [Our Story](https://www.lovebonito.com/intl/global/about-us): Company background and brand history.
+- [FAQ](https://www.lovebonito.com/intl/faq): Customer help centre.
+- [Contact Us](https://www.lovebonito.com/intl/contact-us): Customer support contact.
+- [Terms & Conditions](https://www.lovebonito.com/intl/pages/terms-and-conditions)
+- [Privacy Policy](https://www.lovebonito.com/intl/pages/privacy-policy)
+- [Careers](https://apply.workable.com/lovebonito/): Hiring, via Workable.
+- [GitHub](https://github.com/love-bonito): Public org. Contains engineering hiring challenges
+  (VueJS frontend, PHP backend, QA, DevSecOps) and forked Magento 2 extensions — no product code
+  and no API client libraries.
+
+## Optional
+
+- [Robots](https://www.lovebonito.com/robots.txt): Crawl policy and the six regional sitemaps.
+- [SG Sitemap](https://www.lovebonito.com/media/sitemaps/sg_sitemap.xml): 2,472 storefront URLs.
+
+## API Evangelist profile artifacts
+
+- [Domain security](security/love-bonito-domain-security.yml): Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture.
+- [Well-known probe](well-known/love-bonito-well-known.yml): Measured absence of every RFC 8615 path.
+- [Plans](plans/love-bonito-plans-pricing.yml): `plan_count: 0` — no API plans published.
+- [Rate limits](rate-limits/love-bonito-rate-limits.yml): `limit_count: 0` — no limits published.
+
+<!-- generated: 2026-08-25 | method: generated | source: apis.yml + probed repo artifacts; no
+     provider-published llms.txt exists (https://www.lovebonito.com/llms.txt returns the
+     storefront SPA shell, HTTP 200, not a document) -->

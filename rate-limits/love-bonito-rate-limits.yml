@@ -1,0 +1,26 @@
+generated: '2026-08-25'
+method: probed
+source: >-
+  Anonymous probes of api.lovebonito.com and www.lovebonito.com plus a documentation search for a
+  published Love, Bonito rate-limit reference — 2026-08-25.
+limit_count: 0
+rate_limits: []
+response_headers: []
+note: >-
+  No rate limits are published, and none are observable. Love, Bonito operates no public API, so
+  there is no documented quota, window, burst, or exhaustion status code to record. Its
+  first-party Kong gateway at api.lovebonito.com refuses every anonymous request with HTTP 401
+  {"message":"Unauthorized"} before any limit is reached, and returns no X-RateLimit-*,
+  RateLimit-*, or Retry-After headers on that response — only x-kong-response-latency. The
+  storefront edge (Cloudflare) does apply an undocumented bot/abuse policy: repeated automated
+  GETs against www.lovebonito.com began receiving HTTP 403 challenge pages partway through this
+  pass. That is a WAF policy, not a published API rate limit, and it is recorded here as an
+  observation rather than as a limit.
+observations:
+- surface: https://api.lovebonito.com/
+  status: 401
+  headers_seen: [strict-transport-security, x-kong-response-latency, cf-ray]
+  ratelimit_headers_seen: []
+- surface: https://www.lovebonito.com/sg
+  status: 403
+  note: Cloudflare WAF challenge after repeated automated requests; no RateLimit-* headers returned.
