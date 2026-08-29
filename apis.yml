@@ -11,6 +11,17 @@ description: >-
   gateway at api.lovebonito.com serving its own first-party apps. Love, Bonito publishes no public
   developer program, API reference, or machine-readable contract; its partner surface is an affiliate
   program run through third-party networks (Impact, FlexOffers), not a first-party API.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.lovebonito.com/resources/favicons/192.png?v=3
 url: https://raw.githubusercontent.com/api-evangelist/love-bonito/refs/heads/main/apis.yml
 x-type: company
