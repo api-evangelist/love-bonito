@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/love-bonito/integrations
+- https://n8n.io/integrations/love-bonito/
+- https://composio.dev/toolkits/love-bonito
+- https://monid.ai/tools/love-bonito
+checked:
+- https://composio.dev/toolkits/love-bonito
+- https://monid.ai/tools/love-bonito
+- https://n8n.io/integrations/love-bonito/
+- https://zapier.com/apps/love-bonito/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
