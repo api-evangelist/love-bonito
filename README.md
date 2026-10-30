@@ -64,32 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Love, Bonito is a Singapore-headquartered direct-to-consumer womenswear brand, founded in 2010 out of
-the BonitoChico blogshop and now one of Southeast Asia's largest vertically integrated fashion labels.
-It designs, manufactures and retails women's apparel through its own e-commerce storefront, iOS/Android
-shopping apps, and physical stores across Singapore, Malaysia, Indonesia, Hong Kong, Cambodia and the
-Philippines.
+Love, Bonito is a Singapore-headquartered direct-to-consumer womenswear brand, founded in 2010 out of the BonitoChico blogshop and now one of Southeast Asia's largest vertically integrated fashion labels. It designs, manufactures and retails women's apparel — Signatures, Staples and Capsule collections spanning tops, dresses, bottoms, matching sets, petites and maternity — through its own e-commerce storefront, iOS/Android shopping apps and physical stores across Singapore, Malaysia, Indonesia, Hong Kong, Cambodia and the Philippines. The commerce stack is a Next.js storefront on a Magento-derived backend with Storyblok for content, fronted by Cloudflare, with an internal Kong API gateway at api.lovebonito.com serving its own first-party apps. Love, Bonito publishes no public developer program, API reference, or machine-readable contract; its partner surface is an affiliate program run through third-party networks (Impact, FlexOffers), not a first-party API.
 
-## No public API
+**Areas:** Company · Retail · E-Commerce · Fashion · Apparel · Direct to Consumer · Singapore · Southeast Asia
 
-Love, Bonito publishes no developer program, API reference, SDK, webhook catalog, MCP server, or
-machine-readable contract of any kind. This profile records that absence and the probes behind it:
+## Love Bonito on APIs.io
 
-- `https://api.lovebonito.com/` is a first-party Kong gateway serving Love, Bonito's own storefront and
-  mobile apps. Every path probed returns `HTTP 401 {"message":"Unauthorized"}`.
-- No `developers.` or `docs.` host resolves on `lovebonito.com`.
-- No `/.well-known/*` document is served on any Love, Bonito host — see `well-known/`.
-- The only partner surface is an affiliate program run through third-party networks (Impact,
-  FlexOffers, Optimise); it is a referral-link program with no API.
+Everything profiled for Love Bonito is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/love-bonito/](https://apis.io/providers/love-bonito/)** — or go straight to one of the APIs or properties below.
 
-## Links
+### Published properties
 
-- Website — https://www.lovebonito.com/
-- Our Story — https://www.lovebonito.com/intl/global/about-us
-- FAQ — https://www.lovebonito.com/intl/faq
-- Contact Us — https://www.lovebonito.com/intl/contact-us
-- Terms & Conditions — https://www.lovebonito.com/intl/pages/terms-and-conditions
-- Privacy Policy — https://www.lovebonito.com/intl/pages/privacy-policy
-- Careers — https://apply.workable.com/lovebonito/
-- GitHub — https://github.com/love-bonito (engineering hiring challenges and forked Magento 2
-  extensions; no product code, no API client libraries)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Love Bonito Domain Security](https://apis.io/security/love-bonito/love-bonito-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Love Bonito Plans Pricing](https://apis.io/plans/love-bonito/love-bonito-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Love Bonito Rate Limits](https://apis.io/rate-limits/love-bonito/love-bonito-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lovebonito.com/)
+- [Support](https://www.lovebonito.com/intl/contact-us)
+- [Terms of service](https://www.lovebonito.com/intl/pages/terms-and-conditions)
+- [Privacy policy](https://www.lovebonito.com/intl/pages/privacy-policy)
+- [GitHub](https://github.com/love-bonito)
+
+## API Evangelist rating
+
+**Kin Score 4.5** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/love-bonito/](https://apis.io/providers/love-bonito/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Love Bonito: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/love-bonito/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
